@@ -1,0 +1,8 @@
+{
+    "esversion":6
+    "ecmaFeatures": {
+        "experimentalObjectRestSpread": true,
+        "jsx": true,
+        "modules": true
+    }
+}
