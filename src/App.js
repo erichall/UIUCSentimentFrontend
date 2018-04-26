@@ -11,6 +11,8 @@ var _ = require('lodash');
 const prod = 'http://uiuc-sentiment-backend-09f9c9cc-1.a6384326.cont.dockerapp.io:8080/
 const dev = 'http://localhost:5002/';
 
+console.log('what are we running: ', prod)
+
 class App extends Component {
   constructor(props) {
     super(props)
