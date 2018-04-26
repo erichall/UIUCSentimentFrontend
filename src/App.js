@@ -8,8 +8,8 @@ import { create_dataset, create_data } from './utils';
 import { chartOptions } from './graphConf';
 var _ = require('lodash');
 
-const prod = 'https://uiuc-sentiment-backend-09f9c9cc-1.983a6fff.cont.dockerapp.io:8080/';
-const dev = 'https://localhost:5002/';
+const prod = 'http://uiuc-sentiment-backend-09f9c9cc-1.a6384326.cont.dockerapp.io:8080/
+const dev = 'http://localhost:5002/';
 
 class App extends Component {
   constructor(props) {
