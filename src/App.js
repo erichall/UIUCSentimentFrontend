@@ -8,6 +8,9 @@ import { create_dataset, create_data } from './utils';
 import { chartOptions } from './graphConf';
 var _ = require('lodash');
 
+const prod = 'https://uiuc-sentiment-backend-09f9c9cc-1.983a6fff.cont.dockerapp.io:8080/';
+const dev = 'https://localhost:5002/';
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -23,7 +26,8 @@ class App extends Component {
   };
 
   fetch_data(start_date='2018-01-01', end_date='2018-02-01') {
-    return axios.get(`http://localhost:5002/sentiment_range?start_date=${start_date}&end_date=${end_date}.json`)
+  
+    return axios.get(prod + `sentiment_range?start_date=${start_date}&end_date=${end_date}.json`)
   };
 
   setupGraph(start_date, end_date) {
