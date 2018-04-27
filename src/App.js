@@ -8,7 +8,7 @@ import { create_dataset, create_data } from './utils';
 import { chartOptions } from './graphConf';
 var _ = require('lodash');
 
-const prod = 'http://backend-1.sentiment.eab445d0.cont.dockerapp.io:80'
+const prod = 'http://backend-1.sentiment.eab445d0.cont.dockerapp.io:8080'
 
 const dev = 'http://localhost:5002/';
 
