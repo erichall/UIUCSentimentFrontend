@@ -29,8 +29,9 @@ class App extends Component {
   };
 
   fetch_data(start_date='2018-01-01', end_date='2018-02-01') {
-  
-    return axios.get(dev + `sentiment_range?start_date=${start_date}&end_date=${end_date}.json`)
+      url = dev + `sentiment_range?start_date=${start_date}&end_date=${end_date}.json`
+      console.log('fetch data from: ', url)
+      return axios.get(url)
   };
 
   setupGraph(start_date, end_date) {
