@@ -10,7 +10,7 @@ var _ = require('lodash');
 
 const prod = 'http://backend-1.sentiment.eab445d0.cont.dockerapp.io:8080'
 
-const dev = 'http://localhost:5002/';
+const dev = 'http://localhost/';
 
 console.log('what are we running: ', prod)
 
@@ -30,7 +30,7 @@ class App extends Component {
 
   fetch_data(start_date='2018-01-01', end_date='2018-02-01') {
   
-    return axios.get(prod + `sentiment_range?start_date=${start_date}&end_date=${end_date}.json`)
+    return axios.get(dev + `sentiment_range?start_date=${start_date}&end_date=${end_date}.json`)
   };
 
   setupGraph(start_date, end_date) {
