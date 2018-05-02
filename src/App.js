@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import {Line} from 'react-chartjs-2';
@@ -8,11 +7,14 @@ import { create_dataset, create_data } from './utils';
 import { chartOptions } from './graphConf';
 var _ = require('lodash');
 
+const serverHost = typeof process.env.REACT_APP_SERVER_HOST === 'undefined' ? 'localhost' : process.env.REACT_APP_SERVER_HOST
+
+const serverPort = typeof process.env.REACT_APP_SERVER_PORT === 'undefined' ? '3001' : process.env.REACT_APP_SERVER_PORT
+
+
 const prod = 'http://backend-1.sentiment.eab445d0.cont.dockerapp.io:8080'
 
-const dev = 'http://localhost/';
-
-console.log('what are we running: ', prod)
+const server = 'http://' + serverHost + ':' + serverPort;
 
 class App extends Component {
   constructor(props) {
@@ -29,7 +31,7 @@ class App extends Component {
   };
 
   fetch_data(start_date='2018-01-01', end_date='2018-02-01') {
-      const url = dev + `sentiment_range?start_date=${start_date}&end_date=${end_date}.json`
+      const url = server + `/sentiment_range?start_date=${start_date}&end_date=${end_date}.json`
       console.log('fetch data from: ', url)
       return axios.get(url)
   };

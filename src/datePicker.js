@@ -1,5 +1,5 @@
 import 'react-dates/initialize';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
+import { DateRangePicker} from 'react-dates';
 import moment from 'moment';
 import React, { Component } from 'react';
 import 'react-dates/lib/css/_datepicker.css';
