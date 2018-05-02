@@ -30,6 +30,10 @@ To get the total sentiment for one day, the sum over all sentiment is used for t
 ### server.py
 The server provides the backend REST api for the frontend to be able to fetch data for givens dates. This is done with [flask](http://flask.pocoo.org/)
 
+
+## OVERVIEW [FRONTEND](https://github.com/erichall/UIUCSentimentFrontend)
+The frontend is built using React and is using [React chart js 2](https://github.com/jerairrest/react-chartjs-2) for the graph and [airbnb datepicker](https://github.com/airbnb/react-dates) for choosing dates.
+
 ## USAGE
 In order to run the program on your local computer you need to clone both projects from github and start them in separate terminals.
 
@@ -70,6 +74,8 @@ navigate to ```http://localhost:3000/``` and your browser and you should see a g
 #### FRONTEND TROUBLE
 ##### cache problems
 The most common problem I encountered is browser caching, so either open the frontend page in incognito mode or clear you browser history.
+
+
 
 
 
