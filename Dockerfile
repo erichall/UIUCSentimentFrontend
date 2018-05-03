@@ -13,4 +13,4 @@ RUN npm install -g serve
 
 CMD serve -s build
 
-# EXPOSE 8081
+EXPOSE 8081
