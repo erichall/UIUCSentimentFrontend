@@ -69,7 +69,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      
           <div className="Select-date">
             <h1>Sentiment Analysis for UIUC subreddit</h1>
             <DatePicker dateChanged={this.dateChanged.bind(this)}/>
@@ -87,6 +86,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;
