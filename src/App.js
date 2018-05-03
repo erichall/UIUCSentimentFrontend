@@ -9,7 +9,7 @@ var _ = require('lodash');
 
 const serverHost = typeof process.env.REACT_APP_SERVER_HOST === 'undefined' ? 'localhost' : process.env.REACT_APP_SERVER_HOST
 
-const serverPort = typeof process.env.REACT_APP_SERVER_PORT === 'undefined' ? '3002' : process.env.REACT_APP_SERVER_PORT
+const serverPort = typeof process.env.REACT_APP_SERVER_PORT === 'undefined' ? '8080' : process.env.REACT_APP_SERVER_PORT
 
 
 const prod = 'http://backend-1.sentiment.eab445d0.cont.dockerapp.io:8080'
