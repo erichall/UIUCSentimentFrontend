@@ -14,7 +14,7 @@ const serverPort = typeof process.env.REACT_APP_SERVER_PORT === 'undefined' ? '8
 
 const prod = 'http://backend-1.sentiment.eab445d0.cont.dockerapp.io:8080'
 
-const server = 'http://' + serverHost + ':' + serverPort;
+const server = serverHost + ':' + serverPort;
 
 class App extends Component {
   constructor(props) {
