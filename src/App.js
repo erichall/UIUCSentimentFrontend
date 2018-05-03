@@ -31,7 +31,7 @@ class App extends Component {
   };
 
   fetch_data(start_date='2018-01-01', end_date='2018-02-01') {
-      const url = server + `/sentiment_range?start_date=${start_date}&end_date=${end_date}.json`
+      const url = 'http://' +server + `/sentiment_range?start_date=${start_date}&end_date=${end_date}.json`
       console.log('fetch data from: ', url)
       return axios.get(url)
   };
