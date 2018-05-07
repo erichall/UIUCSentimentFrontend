@@ -9,7 +9,7 @@ var _ = require('lodash');
 
 const serverHost = typeof process.env.REACT_APP_SERVER_HOST === 'undefined' ? 'localhost' : process.env.REACT_APP_SERVER_HOST
 
-const serverPort = typeof process.env.REACT_APP_SERVER_PORT === 'undefined' ? '8080' : process.env.REACT_APP_SERVER_PORT
+const serverPort = typeof process.env.REACT_APP_SERVER_PORT === 'undefined' ? '3001' : process.env.REACT_APP_SERVER_PORT
 
 
 const prod = 'http://backend-1.sentiment.eab445d0.cont.dockerapp.io:8080'
@@ -31,7 +31,7 @@ class App extends Component {
   };
 
   fetch_data(start_date='2018-01-01', end_date='2018-02-01') {
-      const url = 'https://' +server + `/sentiment_range?start_date=${start_date}&end_date=${end_date}.json`
+      const url = 'http://' + server + `/sentiment_range?start_date=${start_date}&end_date=${end_date}.json`
       console.log('fetch data from: ', url)
       return axios.get(url)
   };
@@ -55,7 +55,8 @@ class App extends Component {
       const data_format = create_data(label_dates, [post_counts, ema_d]) 
       this.setState({data: data_format})
     })
-    .then(() => this.setState({fetching: false }));
+    .then(() => this.setState({fetching: false }))
+    .catch(error => console.log('Failed to fetch: ', error))
   };
 
   dateChanged(start_date, end_date){

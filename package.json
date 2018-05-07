@@ -20,9 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "PORT=8081 HTTPS=true react-scripts build",
+    "build": "PORT=3000 HTTPS=true react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "http://localhost:3001"
 }
